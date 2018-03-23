@@ -25,13 +25,18 @@ form = """
         </style>
     </head>
     <body>
-      <!-- create your form here -->
+        <form action="" method="POST">
+            <label for="rot">Rotate by:</label>
+            <input type="text" name="rot" id="rot"/><br>
+            <textarea name="text"/><br>
+            <input type="submit" value="Encode"/>
+        </form>
     </body>
 </html>
 """
 
 @app.route("/")
 def index():
-    return "Hello World"
+    return form
 
 app.run()
