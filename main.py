@@ -43,7 +43,6 @@ def index():
 
 @app.route("/", methods=["POST"])
 def encrypt():
-    rot = ''
     if request.form['rot'] == '':
         rot = 0
     else:
